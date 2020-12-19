@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  database:
+    image: oracle/database:19.3.0-ee
+    container_name: oracle19c
+    ports:
+      - 1521:1521
+      - 5500:5500
+    environment:
+      ORACLE_SID: orcl
+      ORACLE_PWD: password
+      CONTAINER_NAME: oracle19c
+    volumes:
+      - ~/workspace/docker/oracle/oradata:/opt/oracle/oradata
+      - ~/workspace/docker/oracle/scripts:/opt/oracle/scripts/setup
