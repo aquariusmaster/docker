@@ -18,7 +18,7 @@ ALTER PROFILE DEFAULT LIMIT PASSWORD_LIFE_TIME  UNLIMITED;
 -- create the default tablespace for all applications
 -- **************************************************
 ALTER SESSION SET container = orcl;
-CREATE TABLESPACE ANDERB_TBS DATAFILE '/opt/oracle/oradata/ORCL/anderb_tbs.dbf' SIZE 25M REUSE AUTOEXTEND ON MAXSIZE UNLIMITED;
+CREATE TABLESPACE ANDERB_TBS DATAFILE '/opt/oracle/product/19c/dbhome_1/anderb_tbs.dbf' SIZE 25M REUSE AUTOEXTEND ON MAXSIZE UNLIMITED;
 
 -- *************************************************
 -- create users

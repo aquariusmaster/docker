@@ -8,6 +8,7 @@ services:
       - 1521:1521
       - 5500:5500
     environment:
+      ORACLE_SID: orclsid
       ORACLE_PDB: orcl
       ORACLE_PWD: password
       CONTAINER_NAME: orcl
