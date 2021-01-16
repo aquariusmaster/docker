@@ -12,5 +12,5 @@ services:
       ORACLE_PWD: password
       CONTAINER_NAME: orcl
     volumes:
-      - ~/workspace/spatial/tmp/oracle/oradata:/opt/oracle/oradata
-      - ~/workspace/spatial/docker/oracle/scripts:/opt/oracle/scripts/setup
+      - ~/workspace/docker/oracle/oradata:/opt/oracle/oradata
+      - ~/workspace/docker/oracle/scripts:/opt/oracle/scripts/setup

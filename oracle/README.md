@@ -19,3 +19,9 @@
    docker-compose up
    ```
    It may take up to 20-30 minutes the first time to run the container.
+
+For linux:
+   ```bash
+   mkdir ~/workspace/docker/oracle/oradata
+   sudo chown -R 54321:54321 oradata
+   ```
