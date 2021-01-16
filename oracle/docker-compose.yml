@@ -1,5 +1,5 @@
 version: "3"
-
+ 
 services:
   database:
     image: oracle/database:19.3.0-ee
@@ -8,9 +8,9 @@ services:
       - 1521:1521
       - 5500:5500
     environment:
-      ORACLE_SID: orcl
+      ORACLE_PDB: orcl
       ORACLE_PWD: password
-      CONTAINER_NAME: oracle19c
+      CONTAINER_NAME: orcl
     volumes:
-      - ~/workspace/docker/oracle/oradata:/opt/oracle/oradata
-      - ~/workspace/docker/oracle/scripts:/opt/oracle/scripts/setup
+      - ~/workspace/spatial/tmp/oracle/oradata:/opt/oracle/oradata
+      - ~/workspace/spatial/docker/oracle/scripts:/opt/oracle/scripts/setup
