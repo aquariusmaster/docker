@@ -1,6 +1,6 @@
-create database if not exists bank;
+create database if not exists mydb;
 
-use bank;
+use mydb;
 
 create table if not exists accounts
 (
@@ -14,3 +14,4 @@ create table if not exists accounts
 insert into accounts (login, balance) values ('petya', 1000);
 insert into accounts (login, balance) values ('vasya', 2000);
 insert into accounts (login, balance) values ('mark', 500);
+

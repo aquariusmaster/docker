@@ -5,13 +5,14 @@ services:
     restart: always    
     environment:
         - MYSQL_ROOT_PASSWORD=root
-        - MYSQL_DATABASE=mysql
+        - MYSQL_DATABASE=mydb
         - MYSQL_USER=myuser
         - MYSQL_PASSWORD=password
-    command: --init-file /init.sql
+    command: --default-authentication-plugin=mysql_native_password
     volumes:
         - ./data/:/var/lib/mysql
-        - ./init.sql:/init.sql
+#        - ./init.sql:/init.sql
+        - ./init.sql:/docker-entrypoint-initdb.d/data.sql
     expose:
         - "3306"
     ports:
