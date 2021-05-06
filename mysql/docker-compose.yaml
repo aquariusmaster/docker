@@ -1,0 +1,18 @@
+version: '3.4'
+services:
+  db:
+    image: mysql
+    restart: always    
+    environment:
+        - MYSQL_ROOT_PASSWORD=root
+        - MYSQL_DATABASE=mysql
+        - MYSQL_USER=myuser
+        - MYSQL_PASSWORD=password
+    command: --init-file /init.sql
+    volumes:
+        - ./data/:/var/lib/mysql
+        - ./init.sql:/init.sql
+    expose:
+        - "3306"
+    ports:
+        - "3306:3306"
