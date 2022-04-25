@@ -1,0 +1,16 @@
+version: '2.1'
+services:
+  keycloak:
+    build: .
+    image: anderb/keycloak:12.0.4
+    environment:
+      DB_VENDOR: POSTGRES
+      DB_ADDR: database
+      DB_DATABASE: keycloak
+      DB_USER: postgres
+      DB_SCHEMA: public
+      DB_PASSWORD: postgres
+      KEYCLOAK_USER: admin
+      KEYCLOAK_PASSWORD: admin
+    ports:
+      - "10080:8080"
